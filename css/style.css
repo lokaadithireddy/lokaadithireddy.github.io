@@ -40,7 +40,9 @@ button:focus {
   color: black !important;
   font-family: 'PT Sans Narrow';
   font-weight: bold;
-  font-size: 15px;
+  font-size: 14px;
+  padding-left: 11px !important;
+  padding-right: 11px !important;
 }
 
 .navbar-nav-shrink > li > a {
@@ -81,7 +83,7 @@ button:focus {
   /* background-color: #374456; */
   background-color: black;
 
-  background-image: url("/images/mybg.jpg");
+  background-image: url("../images/mybg.jpg");
   background-color: #cccccc;
   /* height: 780px; */
   background-position: center;
@@ -89,14 +91,13 @@ button:focus {
   background-size: cover;
   /* position: relative; */
 
-  /* background-image: url("/images/mybg.jpg");
+  /* background-image: url("../images/mybg.jpg");
   background-color: #cccccc;
   /* height: 850px; */
   /* background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative; */
-  /* background-image: url("/images/adu.jpeg"); */
   /* background-color: #374456; */
 }
 #lef{
@@ -112,6 +113,13 @@ button:focus {
   
   
 } 
+
+.profile-photo {
+  width: min(540px, 100%);
+  height: auto;
+  max-height: 620px;
+  object-fit: contain;
+}
 
 #profile-picture {
   margin-top: 200px;
@@ -138,6 +146,22 @@ button:focus {
   font-size: 15px;
 }
 
+.hero-subtitle {
+  font-size: 22px;
+  line-height: 1.45;
+  max-width: 620px;
+  color: #1f2933;
+  font-family: 'Montserrat';
+}
+
+.hero-metrics {
+  margin-top: 18px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #374456;
+  font-family: 'Montserrat';
+}
+
 #about > .container-fluid {
   
     background-color: white;
@@ -151,7 +175,7 @@ button:focus {
   font-size: 30px;
   color: #2d3e50;
 }
- #social-desc > div > .blockquote, #contact-desc > div > .blockquote,  #skills-desc > div > .blockquote, #projects-desc > div > .blockquote , #resume-desc > div > .blockquote{
+ #social-desc > div > .blockquote, #contact-desc > div > .blockquote,  #skills-desc > div > .blockquote, #case-studies-desc > div > .blockquote, #projects-desc > div > .blockquote , #resume-desc > div > .blockquote{
   border-left: 5px solid black;
   font-family: Montserrat;
   font-weight: bold;
@@ -168,6 +192,11 @@ button:focus {
   margin-top: 50px;
 }
 
+#about-me-content p {
+  margin-bottom: 18px;
+  line-height: 1.55;
+}
+
 #about-me-content > a {
   color:black;
 }
@@ -175,10 +204,73 @@ button:focus {
   text-decoration: none;
 }
 
+#case-studies {
+  background: #ffffff;
+}
+
+#case-studies > .container-fluid {
+  padding: 80px 80px 90px 80px;
+}
+
+#case-studies-desc {
+  padding-bottom: 20px;
+}
+
+.case-study-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.case-study-grid > div {
+  display: flex;
+  margin-bottom: 22px;
+}
+
+.case-card {
+  width: 100%;
+  min-height: 320px;
+  padding: 26px 24px;
+  border: 1px solid #d8e1ea;
+  background: #f8fafc;
+  color: #111827;
+  font-family: 'PT Sans Narrow';
+  font-size: 19px;
+  line-height: 1.35;
+}
+
+.case-card h3 {
+  margin-top: 16px;
+  margin-bottom: 14px;
+  color: #1f2933;
+  font-family: 'Montserrat';
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.case-label {
+  display: inline-block;
+  padding: 5px 8px;
+  border: 1px solid #b7c9d9;
+  color: #1f4d78;
+  background: #ffffff;
+  font-family: 'Montserrat';
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.case-stack {
+  margin-top: 16px;
+  color: #374456;
+  font-family: 'Montserrat';
+  font-size: 13px;
+  font-weight: bold;
+}
+
 #skills {
-  background-image: url("/images/mybg.jpg");
+  background-image: url("../images/mybg.jpg");
   background-color: #cccccc;
-  height: 700px;
+  min-height: 760px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -211,6 +303,24 @@ button:focus {
 #skills-content {
   margin-top: 30px !important;
   
+}
+
+.text-w3l {
+  margin-bottom: 22px;
+}
+
+.text-w3l h4 {
+  color: #1f2933;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  letter-spacing: 0;
+}
+
+.text-w3l p {
+  color: #111827;
+  font-family: 'PT Sans Narrow';
+  font-size: 20px;
+  line-height: 1.35;
 }
 #tools, #languages, #webservers, #webservices, #frameworks, #databases, #webtechnologies, #messagingplatforms, #testingframeworks {
   border: solid 1px white;
@@ -287,7 +397,7 @@ button:focus {
 #projects-desc {
   padding: 80px 50px 10px 80px;
 }
-#picture-container{
+.picture-container{
   padding: 40px 50px 10px 80px;
 }
 .img-responsive {
@@ -296,8 +406,11 @@ button:focus {
 
 }
 
-#projects > .container-fluid > .row > #picture-container > h2{
+#projects > .container-fluid > .row > .picture-container > h2{
   padding-left: 20%;
+  color: #1f2933;
+  font-family: 'Montserrat';
+  font-weight: bold;
 }
 
 #projects > .container-fluid {
@@ -309,7 +422,7 @@ button:focus {
   padding-left: 40%;
 }
 
-#picture-container:hover {
+.picture-container:hover {
   cursor: pointer;
   opacity: 0.7;
   background-color: #374456;
@@ -320,8 +433,12 @@ button:focus {
   color: black;
 }
 
+#contactinfo a {
+  color: #1f2933;
+}
+
 #social {
-  background-image: url("/images/mybg.jpg");
+  background-image: url("../images/mybg.jpg");
   background-color: #cccccc;
   height: 480px;
   background-position: center;
@@ -402,8 +519,15 @@ textarea {
   margin-bottom: 30px;
 }
 
-#download-resume {
+.resume-links {
   margin-top: 30px;
+  text-align: center;
+}
+
+.download-resume {
+  margin-top: 30px;
+  margin-left: 8px;
+  margin-right: 8px;
   border-radius: 0px;
   border: solid 3px white;
   color: white;
@@ -413,10 +537,10 @@ textarea {
   transition: 0.3s;
 }
 
-#download-resume:focus {
+.download-resume:focus {
   outline: none;
 }
-#download-resume:hover {
+.download-resume:hover {
   border-color:#a0abbb;
   background-color:#a0abbb;
 }
@@ -439,6 +563,67 @@ padding: 100px 30px 100px 30px;
 #skills > .container-fluid {
     padding: 100px 30px 100px 30px;
 }
+
+#case-studies > .container-fluid {
+  padding: 80px 30px;
+}
+
+.case-study-grid {
+  display: block;
+}
+
+.case-card {
+  min-height: 0;
+}
+
+#skills {
+  min-height: 1200px;
+}
+
+#lef {
+  padding: 140px 30px 40px 30px;
+}
+
+#rig {
+  padding: 20px 30px 40px 30px;
+}
+
+#rig img {
+  width: 100%;
+  height: auto;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+}
+
+.hero-metrics {
+  font-size: 14px;
+}
+
+.img-responsive {
+  padding-left: 0;
+  height: auto !important;
+  max-height: 260px;
+  margin: 0 auto;
+}
+
+#projects > .container-fluid > .row > .picture-container > h2 {
+  padding-left: 0;
+  text-align: center;
+}
+
+.picture-container {
+  padding: 30px;
+}
+
+#social {
+  height: auto;
+}
+
+#social > .container-fluid {
+  padding: 100px 30px;
+}
 #projects-desc {
   padding: 80px 30px 0px 30px;
 }
@@ -460,3 +645,209 @@ padding: 100px 30px 100px 30px;
 }
 }
 
+
+/* ---- 2026 polish pass: accessibility, responsive layout, and cleaner cards ---- */
+:root {
+  --ink: #111827;
+  --muted: #4b5563;
+  --brand: #374456;
+  --brand-soft: #a0abbb;
+  --surface: #ffffff;
+  --surface-alt: #f8fafc;
+  --line: #d8e1ea;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 12px;
+  z-index: 9999;
+  padding: 10px 14px;
+  background: var(--ink);
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+}
+
+.skip-link:focus {
+  left: 12px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-default {
+  border: 0 !important;
+  box-shadow: 0 1px 0 rgba(17, 24, 39, 0.05);
+}
+
+#home {
+  min-height: 760px;
+  display: flex;
+  align-items: center;
+}
+
+#lef {
+  background: rgba(255,255,255,0.82);
+  backdrop-filter: blur(3px);
+  border-radius: 18px;
+  margin-top: 11%;
+  padding: 56px 48px 46px 12%;
+}
+
+.title-text {
+  font-family: Montserrat, sans-serif;
+  color: var(--ink);
+}
+
+#lef h1.title-text {
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+}
+
+.hero-subtitle {
+  color: #24313f;
+}
+
+.hero-actions {
+  margin-top: 26px;
+}
+
+.hero-actions .btn {
+  margin-right: 12px;
+  margin-bottom: 12px;
+  border-radius: 999px;
+  padding: 12px 20px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+}
+
+.hero-actions .btn-primary {
+  background: var(--brand);
+  border-color: var(--brand);
+}
+
+.hero-actions .btn-primary:hover,
+.hero-actions .btn-primary:focus {
+  background: #1f2933;
+  border-color: #1f2933;
+}
+
+.profile-photo {
+  filter: drop-shadow(0 18px 30px rgba(17, 24, 39, 0.22));
+  border-radius: 18px;
+}
+
+.case-card {
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(17, 24, 39, 0.07);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.case-card:hover {
+  transform: translateY(-4px);
+  border-color: #b7c9d9;
+  box-shadow: 0 16px 34px rgba(17, 24, 39, 0.11);
+}
+
+.picture-container {
+  border-radius: 16px;
+  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+
+.picture-container:hover,
+.picture-container:focus {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(17, 24, 39, 0.12);
+  outline: none;
+}
+
+.picture-container:focus-visible,
+.btn:focus-visible,
+a:focus-visible,
+.navbar-toggle:focus-visible {
+  outline: 3px solid #1f4d78 !important;
+  outline-offset: 3px;
+}
+
+.modal-body p {
+  color: #1f2933;
+  border: 0;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.modal-body .btn-primary {
+  background: var(--brand);
+  border-color: var(--brand);
+  border-radius: 999px;
+}
+
+.contact-copy {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 20px;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+.download-resume {
+  display: inline-block;
+  border-radius: 999px;
+  border-color: var(--brand);
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+@media screen and (max-width: 991px) {
+  #lef {
+    margin: 140px 24px 24px 24px;
+    padding: 42px 34px;
+  }
+
+  #rig {
+    padding-left: 30px;
+  }
+}
+
+@media screen and (max-width: 783px) {
+  #home {
+    min-height: auto;
+  }
+
+  #lef {
+    margin: 118px 16px 20px 16px;
+    padding: 32px 24px;
+  }
+
+  #lef h1.title-text {
+    font-size: 34px;
+  }
+
+  .hero-actions .btn {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  #case-studies > .container-fluid,
+  #about > .container-fluid,
+  #skills > .container-fluid,
+  #social > .container-fluid {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .case-card {
+    margin-bottom: 18px;
+  }
+}
