@@ -808,14 +808,67 @@ a:focus-visible,
   text-decoration: none !important;
 }
 
+/* Final hero layout overrides */
+#home {
+  min-height: 760px;
+  display: flex;
+  align-items: center;
+}
+
+#home > .container-fluid {
+  width: 100%;
+}
+
+#home .row {
+  display: flex;
+  align-items: center;
+  min-height: 620px;
+}
+
+#lef {
+  margin-top: 8%;
+  margin-left: 8%;
+  padding: 48px 46px;
+}
+
+#rig {
+  padding: 120px 8% 70px 4%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-photo-frame {
+  width: min(560px, 100%);
+  max-height: 620px;
+  overflow: hidden;
+  border-radius: 22px;
+  background: rgba(255,255,255,0.64);
+  box-shadow: 0 18px 34px rgba(17, 24, 39, 0.18);
+}
+
+.hero-photo-frame .profile-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  border-radius: 0;
+  filter: none;
+}
+
 @media screen and (max-width: 991px) {
+  #home .row {
+    display: block;
+    min-height: 0;
+  }
+
   #lef {
     margin: 140px 24px 24px 24px;
     padding: 42px 34px;
   }
 
   #rig {
-    padding-left: 30px;
+    padding: 20px 30px 60px 30px;
   }
 }
 
